@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class OpenQuestionCard {
 
-    private Long id;
+    private final Long id;
 
     private final String question;
 
