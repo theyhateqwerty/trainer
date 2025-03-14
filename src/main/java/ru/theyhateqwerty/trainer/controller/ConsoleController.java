@@ -60,7 +60,7 @@ public class ConsoleController {
 
     private void removeQuestion() {
         System.out.println("Введите id вопроса, который хотите удалить");
-        Long id = scanner.nextLong();
+        Long id = Long.parseLong(scanner.nextLine());
         Optional<OpenQuestionCard> questionCard = service.getById(id);
         if (questionCard.isPresent()) {
             System.out.println("Введите [Y], если точно хотите удалить вопрос " + questionCard.get());
@@ -75,7 +75,7 @@ public class ConsoleController {
 
     private void findQuestion() {
         System.out.println("Введите id вопроса, который хотите найти");
-        Long id = scanner.nextLong();
+        Long id = Long.parseLong(scanner.nextLine());
         Optional<OpenQuestionCard> questionCard = service.getById(id);
         if (questionCard.isPresent()) {
             System.out.println(questionCard.get());
