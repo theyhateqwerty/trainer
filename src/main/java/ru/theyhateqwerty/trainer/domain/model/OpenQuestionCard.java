@@ -34,6 +34,10 @@ public class OpenQuestionCard {
         return question;
     }
 
+    public String getAnswer() {
+        return expectedAnswer;
+    }
+
     public boolean checkAnswer(String answer) {
         return answer.equals(expectedAnswer);
     }

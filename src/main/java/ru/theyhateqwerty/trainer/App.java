@@ -1,17 +1,16 @@
 package ru.theyhateqwerty.trainer;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.theyhateqwerty.trainer.config.SpringConfig;
 import ru.theyhateqwerty.trainer.controller.ConsoleController;
-import ru.theyhateqwerty.trainer.domain.repo.QuestionRepository;
-import ru.theyhateqwerty.trainer.domain.service.QuestionService;
-import ru.theyhateqwerty.trainer.storage.QuestionInMemoryStorage;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        QuestionRepository repository = new QuestionInMemoryStorage();
-        QuestionService service = new QuestionService(repository);
-        ConsoleController controller = new ConsoleController(service);
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        ConsoleController controller = context.getBean(ConsoleController.class);
         controller.interactWithUser();
     }
 }

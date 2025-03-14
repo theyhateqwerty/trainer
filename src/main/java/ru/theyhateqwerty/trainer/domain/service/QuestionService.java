@@ -1,5 +1,6 @@
 package ru.theyhateqwerty.trainer.domain.service;
 
+import org.springframework.stereotype.Service;
 import ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard;
 import ru.theyhateqwerty.trainer.domain.repo.QuestionRepository;
 
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+@Service
 public class QuestionService {
 
     private final QuestionRepository questionRepository;

@@ -1,11 +1,13 @@
 package ru.theyhateqwerty.trainer.controller;
 
+import org.springframework.stereotype.Component;
 import ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard;
 import ru.theyhateqwerty.trainer.domain.service.QuestionService;
 
 import java.util.Optional;
 import java.util.Scanner;
 
+@Component
 public class ConsoleController {
 
     private static final String MENU = """
