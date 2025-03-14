@@ -1,4 +1,4 @@
-package ru.theyhateqwerty;
+package ru.theyhateqwerty.trainer;
 
 /**
  * Hello world!
