@@ -49,13 +49,7 @@ public class QuestionService {
         }
     }
 
-    public void delete(OpenQuestionCard questionCard) {
-        if (isQuestionInvalid(questionCard)) {
-            return;
-        }
-
-        questionRepository.remove(questionCard.getId());
-    }
+    public void delete(Long id) { questionRepository.remove(id); }
 
     private boolean isQuestionInvalid(OpenQuestionCard questionCard) {
         return Objects.isNull(questionCard) || Objects.isNull(questionCard.getId());
