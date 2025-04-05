@@ -69,7 +69,7 @@ public class ConsoleController {
             System.out.println("Введите [Y], если точно хотите удалить вопрос " + questionCard.get());
             String confirmation = scanner.nextLine();
             if ("Y".equals(confirmation)) {
-                service.delete(questionCard.get());
+                service.delete(id);
             }
         } else {
             System.out.println("Такого вопроса найти не удалось");
