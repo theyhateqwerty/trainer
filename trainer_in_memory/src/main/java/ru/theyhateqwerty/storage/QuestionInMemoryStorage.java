@@ -14,7 +14,9 @@ public class QuestionInMemoryStorage implements QuestionRepository {
     }
 
     @Override
-    public List<OpenQuestionCard> findAll() { return new ArrayList<>(questions.values()); }
+    public List<OpenQuestionCard> findAll() {
+        return new ArrayList<>(questions.values());
+    }
 
     @Override
     public Optional<OpenQuestionCard> getById(Long id) {

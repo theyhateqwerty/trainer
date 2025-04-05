@@ -24,11 +24,11 @@
         </dependency>
         <dependency>
             <groupId>ru.theyhateqwerty</groupId>
-            <artifactId>trainer_spring_jdbc</artifactId>
+            <artifactId>trainer_db_spring_jdbc</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -48,9 +48,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>
-                                ru.theyhateqwerty.console.App
-                            </mainClass>
+                            <mainClass>ru.pitnv.console.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

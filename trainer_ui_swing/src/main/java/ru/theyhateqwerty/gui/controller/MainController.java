@@ -1,10 +1,8 @@
 package ru.theyhateqwerty.gui.controller;
 
-
-
+import ru.theyhateqwerty.domain.model.OpenQuestionCard;
+import ru.theyhateqwerty.domain.service.QuestionService;
 import ru.theyhateqwerty.gui.model.QuestionTableModel;
-import ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard;
-import ru.theyhateqwerty.trainer.domain.service.QuestionService;
 
 import javax.swing.*;
 import java.awt.*;
