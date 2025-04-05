@@ -12,4 +12,6 @@ public interface QuestionDtoMapper {
     OpenQuestionCardDto mapToDto(OpenQuestionCard question);
     List<OpenQuestionCard> mapToModel(List<OpenQuestionCardDto> entities);
     List<OpenQuestionCardDto> mapToDto(List<OpenQuestionCard> questions);
+
+    OpenQuestionCardDto mapToDto(ru.theyhateqwerty.domain.model.OpenQuestionCard task);
 }

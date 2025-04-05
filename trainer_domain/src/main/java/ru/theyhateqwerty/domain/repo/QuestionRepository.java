@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface QuestionRepository {
     List<OpenQuestionCard> findAll();
-    Optional<OpenQuestionCard> getById(Long id);
+    Optional<ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard> getById(Long id);
     void add(OpenQuestionCard questionCard);
     void update(OpenQuestionCard questionCard);
     void remove(Long id);
