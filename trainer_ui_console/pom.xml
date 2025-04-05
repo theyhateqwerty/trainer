@@ -11,6 +11,12 @@
 
     <artifactId>trainer_ui_console</artifactId>
 
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>ru.theyhateqwerty</groupId>
@@ -42,9 +48,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>
-                                ru.pitnv.console.Application
-                            </mainClass>
+                            <mainClass>ru.pitnv.console.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

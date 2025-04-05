@@ -1,9 +1,8 @@
 package ru.theyhateqwerty.console.controller;
 
 import org.springframework.stereotype.Component;
-import ru.theyhateqwerty.domain.model.OpenQuestionCard;
-import ru.theyhateqwerty.domain.service.QuestionService;
-
+import ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard;
+import ru.theyhateqwerty.trainer.domain.service.QuestionService;
 
 import java.util.Optional;
 import java.util.Scanner;
@@ -28,7 +27,7 @@ public class ConsoleController {
     }
 
     public void interactWithUser() {
-        while(true) {
+        while (true) {
             printMenu();
             String operationCode = scanner.nextLine();
             switch (operationCode) {
@@ -36,7 +35,9 @@ public class ConsoleController {
                 case "2" -> addQuestion();
                 case "3" -> removeQuestion();
                 case "4" -> findQuestion();
-                case "5" -> { return; }
+                case "5" -> {
+                    return;
+                }
                 default -> System.out.println("Неизвестная команда");
             }
         }
@@ -68,7 +69,7 @@ public class ConsoleController {
         if (questionCard.isPresent()) {
             System.out.println("Введите [Y], если точно хотите удалить вопрос " + questionCard.get());
             String confirmation = scanner.nextLine();
-            if ("Y".equals(confirmation)) {
+            if ("Y".equalsIgnoreCase(confirmation)) {
                 service.delete(id);
             }
         } else {

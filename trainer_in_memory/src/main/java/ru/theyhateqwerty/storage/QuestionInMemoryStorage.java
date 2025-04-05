@@ -1,14 +1,9 @@
 package ru.theyhateqwerty.storage;
 
+import ru.theyhateqwerty.trainer.domain.model.OpenQuestionCard;
+import ru.theyhateqwerty.trainer.domain.repo.QuestionRepository;
 
-import ru.theyhateqwerty.domain.model.OpenQuestionCard;
-import ru.theyhateqwerty.domain.repo.QuestionRepository;
-
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class QuestionInMemoryStorage implements QuestionRepository {
 
@@ -20,7 +15,7 @@ public class QuestionInMemoryStorage implements QuestionRepository {
 
     @Override
     public List<OpenQuestionCard> findAll() {
-        return questions.values().stream().toList();
+        return new ArrayList<>(questions.values());
     }
 
     @Override

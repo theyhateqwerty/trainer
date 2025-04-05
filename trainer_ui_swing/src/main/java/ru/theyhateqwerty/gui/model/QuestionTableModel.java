@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
 public class QuestionTableModel extends AbstractTableModel {
-    private final String[] columnNames = new String[]{"ID", "Tекст", "Oжидаемый ответ"};
+    private final String[] columnNames = new String[]{"ID", "Текст", "Ожидаемый ответ"};
     private final List<OpenQuestionCard> questions;
 
     public QuestionTableModel(List<OpenQuestionCard> questions) {
@@ -30,10 +30,16 @@ public class QuestionTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        if (columnIndex == 0) {
-            return questions.get(rowIndex).getId();
-        } else {
-            return questions.get(rowIndex).getQuestion();
+        OpenQuestionCard questionCard = questions.get(rowIndex);
+        switch (columnIndex) {
+            case 0:
+                return questionCard.getId();
+            case 1:
+                return questionCard.getQuestion();
+            case 2:
+                return questionCard.getExpectedAnswer();
+            default:
+                return null;
         }
     }
 }

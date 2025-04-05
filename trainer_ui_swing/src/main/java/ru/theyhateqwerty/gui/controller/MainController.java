@@ -1,6 +1,5 @@
 package ru.theyhateqwerty.gui.controller;
 
-
 import ru.theyhateqwerty.domain.model.OpenQuestionCard;
 import ru.theyhateqwerty.domain.service.QuestionService;
 import ru.theyhateqwerty.gui.model.QuestionTableModel;
@@ -116,7 +115,6 @@ public class MainController implements Runnable {
                     null);
             if (questionToDelete != null) {
                 service.delete(questionToDelete.getId());
-
                 prepareMainPanelForListTask();
             }
         });
